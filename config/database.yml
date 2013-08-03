@@ -1,0 +1,16 @@
+development:
+  adapter: mysql
+  database: pails
+  server: 127.0.0.1
+  user: root
+  password: 
+  encoding: utf8
+  
+production:
+  adapter: mysql
+  database: my_super_db
+  server: 123.213.132.1
+  user: im_the_boss
+  password: my_great_password
+  encoding: utf8
+
