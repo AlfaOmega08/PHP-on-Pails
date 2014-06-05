@@ -77,10 +77,10 @@ class Route
 
     public function __get($name)
     {
-        if (!isset($this->name))
+        if (!isset($this->$name))
             return null;
 
-        return $this->name;
+        return $this->$name;
     }
 
     protected function constraint($parameter, $star)
