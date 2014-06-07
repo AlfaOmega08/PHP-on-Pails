@@ -40,7 +40,7 @@ class String
                 if ($limit >= count($ret))
                     return $ret;
 
-                $corrected = []
+                $corrected = [];
                 for ($i = 0; $i < $limit - 1; $i++)
                     $corrected[$i] = $ret[$i];
 
