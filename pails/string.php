@@ -40,12 +40,12 @@ class String
                 if ($limit >= count($ret))
                     return $ret;
 
-                $corrected = [];
-                for ($i = 0; $i < $limit - 1; $i++)
-                    $corrected[$i] = $ret[$i];
+                for ($i = $limit; $i < count($ret); $i++) {
+                    $ret[$limit - 1] .= $match . $ret[$i];
+                    unset($ret[$i]);
+                }
 
-                $corrected[$limit - 1] = implode($match, array_splice($ret, $limit - 1));
-                return $corrected;
+                return $ret;
         }
     }
 
