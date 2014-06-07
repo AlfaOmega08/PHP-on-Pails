@@ -51,7 +51,7 @@ class String
 
     public function rsplit($regex, $limit)
     {
-        return preg_split($regex);
+        return preg_split($regex, $this->string, $limit);
     }
 
     public function squeeze($chars = null)
